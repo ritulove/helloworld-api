@@ -7,7 +7,6 @@ pipeline {
         branch 'development'
       }
       steps {
-        publishEvent simpleEvent('hello-api-deploy-event')
         echo 'build'
         writeFile file: "application.sh", text: "echo Built ${BUILD_ID} of ${JOB_NAME}"
         archiveArtifacts 'application.sh'
