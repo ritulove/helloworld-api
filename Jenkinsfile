@@ -29,7 +29,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        publishEvent simpleEvent('hello-api-deploy-event')
+        publishEvent simpleEvent('hello-api-eli')
         copyArtifacts projectName: '../helloworld-api/development'
         gateConsumesArtifact file: 'application.sh'
       }
